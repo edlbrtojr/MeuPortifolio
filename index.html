@@ -5,22 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
+    
     <header class="cabecalho">
         <nav class="cabecalho__menu">
             <a class="cabecalho__menu__link" href="index.html">Home</a>
             <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
             <a class="cabecalho__menu__link" href="curriculo.html">Meu Currículo</a>
         </nav>
+        <button id="mode-toggle">
+            <!-- Ícone para modo claro (light mode) -->
+            <svg id="light-mode-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+                <path fill="yellow" d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5"/>
+            </svg>
+            
+    
+            <!-- Ícone para modo escuro (dark mode) -->
+            <svg id="dark-mode-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="" class="bi bi-lightbulb" viewBox="0 0 16 16">
+                <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"/>
+              </svg>
+        </button>
+
     </header>
 
     <main class="apresentacao">
         <section class="apresentacao__conteudo">
             <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível <strong class="titulo-destaque">com um Dev apaixonado pelo que faz.</strong></h1>
-            <p class="apresentacao__conteudo__texto"> Olá! Sou Edilberto L. Júnior, professor de língua inglesa e 
-                estudante de TI. Este é meu projeto de portifólio.
+            <p class="apresentacao__conteudo__texto"> Olá! Sou Edilberto A. L. Júnior, Assistente de TI na Federação das Indústria do Acre - FIEAC e formando em Sistemas de Informação. Este é meu projeto de portifólio para a disciplina de HTML, CSS e JavaScript da faculdade.
             </p>
             <div class="apresentacao__links">
                 <h2 class="apresentacao__links_subtitulo">Você pode me encontrar aqui!</h2>
@@ -41,5 +54,8 @@
     <footer class="rodape">
         <a href="index.html"><p>Desenvolvido por Edilberto A. Lima Jr.</p></a>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
+
 </html>

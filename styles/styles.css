@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #f9f9f4;
+    color: #000000;
+}       
+
+body.dark-theme {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.cabecalho {
+    position: relative;  /* Para que o botão seja posicionado em relação ao cabeçalho */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2e7d32;
+    
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+    padding-left: 10%;
+}
+
+.cabecalho__menu__link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #a3d9a5;
+    position: relative;
+
+}
+
+.cabecalho__menu__link.dark-theme {
+    color: #a3d9a5;
+}
+
+#mode-toggle {
+    position: absolute;
+    right: 20px;  /* Distância da borda direita */
+    top: 50%;  /* Alinha verticalmente no meio do cabeçalho */
+    transform: translateY(-50%);  /* Ajusta o alinhamento vertical */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#mode-toggle svg {
+    width: 24px;
+    height: 24px;
+    fill: #000;  /* Cor dos ícones */
+}
+
+#mode-toggle svg#dark-mode-icon {
+    display: none;  /* Esconde o ícone de Dark Mode por padrão */
+}
+
+#mode-toggle svg#light-mode-icon {
+    display: block;  /* Exibe o ícone de Light Mode por padrão */
+}
+
+.titulo-destaque {
+    color: #2e7d32; 
+}
+
+.apresentacao {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.apresentacao__imagem {
+    width: 40%;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: 'Krona One', sans-serif;
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.apresentacao__conteudo__info {
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.apresentacao__links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links_subtitulo {
+    font-family: 'Krona One', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__links__navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid #2e7d32;
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0px;
+    text-decoration: none;
+    color: #2e7d32; /* Cor preta no modo claro */
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.apresentacao__links__navegacao:hover {
+    background-color: #d0f066;
+    color: #ffffff;
+}
+
+.popup-info {
+    display: none;
+    position: absolute;
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.rodape{
+    padding: 10px;
+    color: #ffffff;   
+    background-color: #2e7d32;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.rodape a {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+/* Animação de fade-in */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: #2e7d32;
+    z-index: 1000;
+}
+
+#progress-bar.dark-theme {
+    background-color: #3e9d3f;
+}
+
+
+
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 5% 5% 0% 5%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}
